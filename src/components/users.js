@@ -16,6 +16,8 @@ const Users = () => {
   useEffect(() => {
     getGitUsers().catch((e) => console.error(e));
   }, []);
+
+  
   return (
     <div style={{ marginTop: "50px" }}>
       {" "}
@@ -28,7 +30,7 @@ const Users = () => {
               className="user-avatar"
             />
             <span className="username">{user.login}</span>
-            <button className="view-btn">View User</button>
+            <Link to={`/users/user/${user.login}`} className="view-btn">View User</Link>
           </div>
         ))}
       </div>

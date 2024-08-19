@@ -46,7 +46,7 @@ const SearchUser = () => {
         )}
         <input
           type="text"
-          placeholder="Github Surname"
+          placeholder="Github Username"
           className="login-inp"
           onChange={(e) => {
             setUsername(e.target.value);
